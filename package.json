@@ -1,0 +1,14 @@
+{
+  "name": "nodeserver",
+  "version": "1.0.0",
+  "description": "backend server for api hosting",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "nathan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
