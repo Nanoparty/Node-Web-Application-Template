@@ -38,6 +38,36 @@ app.get("/login", (req, res, next) => {
   );
 });
 
+app.get("/user", (req, res, next) => {
+  console.log(JSON.stringify(req.headers));
+  var username = req.headers.username;
+
+  MongoClient.connect(
+    url,
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    (err, client) => {
+      if (err) {
+        return console.log(err);
+      }
+      const db = client.db("admin");
+      console.log(`MongoDB Connected: ${url}`);
+
+      const users = db.collection("users");
+
+      users.findOne({ username: username }, (err, result) => {
+        console.log("Result:", result);
+        if (result) {
+          console.log("User Found");
+          res.json(result);
+        } else {
+          console.log("User not found");
+          res.status(404).json("Login Failed");
+        }
+      });
+    }
+  );
+});
+
 app.post("/register", (req, res, next) => {
   console.log(JSON.stringify(req.headers));
   var username = req.headers.username;
@@ -60,7 +90,13 @@ app.post("/register", (req, res, next) => {
         if (result) {
           res.json("Username Taken");
         } else {
-          users.insertOne({ username: username, password: password });
+          users.insertOne({
+            username: username,
+            password: password,
+            accountLevel: 1,
+            accountExp: 0,
+            accountExpCap: 5,
+          });
           res.json("Registration Successful");
         }
       });
