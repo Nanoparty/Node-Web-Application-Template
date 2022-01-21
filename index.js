@@ -108,6 +108,45 @@ app.post("/register", (req, res, next) => {
   );
 });
 
+app.post("/purchase", (req, res, next) => {
+  console.log(JSON.stringify(req.headers));
+  var username = req.headers.username;
+  var amount = req.headers.amount;
+
+  MongoClient.connect(
+    url,
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    (err, client) => {
+      if (err) {
+        return console.log(err);
+      }
+      const db = client.db("admin");
+      console.log(`MongoDB Connected: ${url}`);
+
+      const users = db.collection("users");
+
+      users.findOne({ username: username }, (err, result) => {
+        console.log("Result:", result);
+        if (result) {
+          var newGems = parseInt(result.gems) + parseInt(amount);
+          result.gems = newGems.toString();
+          users.updateOne(
+            { username: username },
+            {
+              $set: { gems: newGems.toString() },
+              $currentDate: { lastModified: true },
+            }
+          );
+
+          res.json(result);
+        } else {
+          res.json("Not valid user");
+        }
+      });
+    }
+  );
+});
+
 app.get("/roll", (req, res, next) => {
   console.log(JSON.stringify(req.headers));
   var username = req.headers.username;
