@@ -4,7 +4,8 @@ var app = express();
 const MongoClient = require("mongodb").MongoClient;
 const url = "mongodb://127.0.0.1:27017";
 
-heros = ["Superman", "Alphinaud", "PieDiePie", "Jade", "Obama"];
+const heroRes = require("./heros");
+heros = heroRes.getHeros();
 
 app.listen(3000, () => {
   console.log("Server running on port 3000");
