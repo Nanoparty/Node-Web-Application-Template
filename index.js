@@ -191,7 +191,7 @@ app.get("/roll", (req, res, next) => {
             );
             var newUser = users.findOne();
             res.json({
-              hero: hero,
+              hero,
               //userData: result,
             });
           } else {
