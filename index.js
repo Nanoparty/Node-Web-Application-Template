@@ -190,7 +190,10 @@ app.get("/roll", (req, res, next) => {
               }
             );
             var newUser = users.findOne();
-            res.json(hero);
+            res.json({
+              hero: hero,
+              userData: result,
+            });
           } else {
             res.json("Not enough gems");
           }
