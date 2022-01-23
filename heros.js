@@ -1,6 +1,9 @@
 heros = [
   {
     name: "donut pusheen",
+    level: "1",
+    exp: "0",
+    expCap: "10",
     attack: "100",
     defense: "100",
     health: "100",
@@ -10,6 +13,9 @@ heros = [
   },
   {
     name: "sushi pusheen",
+    level: "1",
+    exp: "0",
+    expCap: "10",
     attack: "100",
     defense: "100",
     health: "100",
@@ -19,6 +25,9 @@ heros = [
   },
   {
     name: "ramen pusheen",
+    level: "1",
+    exp: "0",
+    expCap: "10",
     attack: "100",
     defense: "100",
     health: "100",
@@ -28,6 +37,9 @@ heros = [
   },
   {
     name: "cool pusheen",
+    level: "1",
+    exp: "0",
+    expCap: "10",
     attack: "100",
     defense: "100",
     health: "100",
@@ -37,6 +49,9 @@ heros = [
   },
   {
     name: "boba pusheen",
+    level: "1",
+    exp: "0",
+    expCap: "10",
     attack: "100",
     defense: "100",
     health: "100",
@@ -46,6 +61,9 @@ heros = [
   },
   {
     name: "laptop pusheen",
+    level: "1",
+    exp: "0",
+    expCap: "10",
     attack: "100",
     defense: "100",
     health: "100",
@@ -55,6 +73,9 @@ heros = [
   },
   {
     name: "bread pusheen",
+    level: "1",
+    exp: "0",
+    expCap: "10",
     attack: "100",
     defense: "100",
     health: "100",

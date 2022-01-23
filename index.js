@@ -100,6 +100,7 @@ app.post("/register", (req, res, next) => {
             accountExp: 0,
             accountExpCap: 5,
             gems: 50,
+            gold: 1000,
             heros: [],
           });
           res.json("Registration Successful");
