@@ -1,6 +1,6 @@
 heros = [
   {
-    name: "donut pusheen",
+    name: "knight",
     level: 1,
     exp: 0,
     expCap: 10,
@@ -12,7 +12,7 @@ heros = [
     critPercent: 100,
   },
   {
-    name: "sushi pusheen",
+    name: "farmer",
     level: 1,
     exp: 0,
     expCap: 10,
@@ -24,7 +24,7 @@ heros = [
     critPercent: 100,
   },
   {
-    name: "ramen pusheen",
+    name: "elephant",
     level: 1,
     exp: 0,
     expCap: 10,
@@ -36,7 +36,7 @@ heros = [
     critPercent: 100,
   },
   {
-    name: "cool pusheen",
+    name: "archer",
     level: 1,
     exp: 0,
     expCap: 10,
@@ -48,7 +48,7 @@ heros = [
     critPercent: 100,
   },
   {
-    name: "boba pusheen",
+    name: "squire",
     level: 1,
     exp: 0,
     expCap: 10,
@@ -60,19 +60,7 @@ heros = [
     critPercent: 100,
   },
   {
-    name: "laptop pusheen",
-    level: 1,
-    exp: 0,
-    expCap: 10,
-    attack: 100,
-    defense: 100,
-    health: 100,
-    speed: 100,
-    critChance: 100,
-    critPercent: 100,
-  },
-  {
-    name: "bread pusheen",
+    name: "lizard",
     level: 1,
     exp: 0,
     expCap: 10,
